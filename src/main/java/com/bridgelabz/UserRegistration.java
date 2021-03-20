@@ -17,4 +17,9 @@ public class UserRegistration {
         return  name.matches(regex);
     }
 
+    public boolean isMobileNoValid(String name) {
+        String regex = "^([0-9]{2})[ ]([1-9]{1}[0-9]{9})";
+        return  name.matches(regex);
+    }
+
 }
