@@ -12,4 +12,9 @@ public class UserRegistration {
         return name.matches(regex);
     }
 
+    public boolean isEmailValid(String name) {
+        String regex = "^[a-zA-Z0-9]+([.+-_][a-zA-Z0-9]+)*@[a-zA-z0-9]+.[a-zA-Z]{2}([.][a-zA-Z]{2,4}){0,1}$";
+        return  name.matches(regex);
+    }
+
 }
