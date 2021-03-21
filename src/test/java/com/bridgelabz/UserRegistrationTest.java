@@ -98,5 +98,17 @@ public class UserRegistrationTest {
         Assertions.assertFalse(result);
     }
 
+    //Test Cases for Password Validation
+    @Test
+    public void givenPassword_WhenPasswordHaveMinimum8Characters_ShouldReturn_True() {
+        boolean result = userregistration.isPasswordValid("Rinkesh123");
+        Assertions.assertTrue(result);
+    }
+
+    @Test
+    public void givenPassword_WhenPasswordHaveLessThan8Characters_ShouldReturn_False() {
+        boolean result = userregistration.isPasswordValid("Rinkes");
+        Assertions.assertFalse(result);
+    }
 
 }

@@ -22,4 +22,9 @@ public class UserRegistration {
         return  name.matches(regex);
     }
 
+    public boolean isPasswordValid(String name) {
+        String regex = "^[a-zA-Z0-9]{8,}$";
+        return  name.matches(regex);
+    }
+
 }
