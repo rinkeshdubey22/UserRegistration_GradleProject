@@ -100,22 +100,27 @@ public class UserRegistrationTest {
 
     //Test Cases for Password Validation
     @Test
-    public void givenPassword_WhenPasswordHaveMinimum8CharactersAndHaveAtLeastOneUpperCase_ShouldReturn_True() {
+    public void givenPassword_WhenPasswordHaveMinimum8CharactersAndHaveAtLeastOneUpperCaseAndHaveAtLeastOneDigit_ShouldReturn_True() {
         boolean result = userregistration.isPasswordValid("Rinkesh123");
         Assertions.assertTrue(result);
     }
 
     @Test
-    public void givenPassword_WhenPasswordHaveMinimum8CharactersandDoNotHaveUpperCase_ShouldReturn_False() {
+    public void givenPassword_WhenPasswordHaveMinimum8CharactersandDoNotHaveUpperCaseAndHaveAtLeast1Digit_ShouldReturn_False() {
         boolean result = userregistration.isPasswordValid("rinkesh123");
         Assertions.assertFalse(result);
     }
 
     @Test
-    public void givenPassword_WhenPasswordHaveLessThan8CharactersAndHaveOneUpperCase_ShouldReturn_False() {
-        boolean result = userregistration.isPasswordValid("Rinkesh");
+    public void givenPassword_WhenPasswordHaveLessThan8CharactersAndHaveOneUpperCaseAndHaveAtLeastOneDigit_ShouldReturn_False() {
+        boolean result = userregistration.isPasswordValid("Rinkes1");
         Assertions.assertFalse(result);
     }
 
+    @Test
+    public void givenPassword_WhenPasswordHaveMinimum8CharactersAndHaveOneUpperCaseAndDoNotHaveAtLeastOneDigit_ShouldReturn_False() {
+        boolean result = userregistration.isPasswordValid("Rinkeshd");
+        Assertions.assertFalse(result);
+    }
 
 }

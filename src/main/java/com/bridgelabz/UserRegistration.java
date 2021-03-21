@@ -23,7 +23,7 @@ public class UserRegistration {
     }
 
     public boolean isPasswordValid(String name) {
-        String regex = "^(.*[A-Z]{1}[a-zA-Z0-9]{7,})$";
+        String regex = "^[A-Z]{1}+[a-z]{6,}+[0-9]{1,}";
         return  name.matches(regex);
     }
 
