@@ -27,4 +27,13 @@ public class UserRegistration {
         return  name.matches(regex);
     }
 
+    public String isEntryValid(boolean validate) {
+        if (validate) {
+            return "Happy";
+        } else {
+            return "Sad";
+        }
+
+    }
+
 }

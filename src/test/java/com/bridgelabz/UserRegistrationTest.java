@@ -123,4 +123,17 @@ public class UserRegistrationTest {
         Assertions.assertFalse(result);
     }
 
+    @Test
+    public void whenEntrySuccessfull_ShouldReturn_True() {
+        boolean isValid = true;
+        String validateEntry = userregistration.isEntryValid(isValid);
+        Assertions.assertEquals("Happy", validateEntry);
+    }
+
+    @Test
+    public void whenEntryUnSuccessfull_ShouldReturn_False() {
+        boolean isValid = false;
+        String validateEntry = userregistration.isEntryValid(isValid);
+        Assertions.assertEquals("Sad", validateEntry);
+    }
 }
