@@ -35,8 +35,7 @@ public class EmailParameterizedTest {
                 {"abc..4004@gamil.com", false},
                 {"abc-100@abc.net", true}});
     }
-
-
+    
 
     @Test
     public void givenEmailAsVar_ShouldReturnAsPerTheParameterizedTest() {
